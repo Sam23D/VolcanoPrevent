@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/foundation.min.css" media="screen" rel="stylesheet" type="text/css" >
+    <link href="css/stylesheet.css" media="screen" rel="stylesheet" type="text/css" >
+    <script src="js/javascript.js" ></script>
+    <script src="js/vendor/jquery.js" ></script>
+    <script src="js/foundation.min.js" ></script>
+  </head>
+
+  <body>
+
+    <h1 class="message" >{{ message }}</h1>
+
+    <form action="/meetpt" method="post">
+        <label>MeetPt</label><br>
+        <input  name="name" placeholder="Name" >
+        <input  name="location" placeholder="Location (float , float )">
+        
+        <button type="submit">Save</button>
+    </form>
+
+    <form action="/volcanoes" method="post">
+        <label>Volcano</label><br>
+        <input name="name" placeholder="Name">
+        <input  name="location" placeholder="Location (float , float )">
+        <input name="country" placeholder="Country">
+        <input type=""  name="size" placeholder="Size">
+        <button type="submit">Save</button>
+    </form>
+
+
+    <form action="/msg" method="post">
+        <label>Message</label><br>
+        <input name="type" placeholder="Type">
+        <input name="desc" placeholder="Desc">
+        <input  name="" placeholder="Location (float , float )">
+
+        <button type="submit">Save</button>
+    </form>
+
+
+
+
+
+    <!-- FOUNDATION -->
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+
+</html>
