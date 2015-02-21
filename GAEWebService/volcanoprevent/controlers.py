@@ -97,3 +97,35 @@ class Messages(Renderer):
 
         self.response.headers['Content-Type'] = 'application/json'
         self.response.write( json.encode(result) )
+
+class EvacuationRoutes(Renderer):
+    def post(self):
+        evaRoute = EvacuationRoute()
+
+        evaRoute.name = self.request.get('name')
+
+        allLocations = self.request.get('routePoints')
+        auxAllLocations = allLocations.split(';')
+        evaRoute.origin = ndb.GeoPt( auxAllLocations[0] )
+
+        evaRoute.jsonRouteArray = allLocations
+
+        evaRoute.put()
+
+    def get(self, ):
+        result = {'evacuationRoutes': []}
+
+        evaRoutes = EvacuationRoute.query()
+
+        for e in evaRoutes:
+            x = {}
+            x['name'] = e.name
+
+            x['route'] = e.jsonRouteArray.split(';')
+
+            x['origin'] = str(e.origin)
+
+            result['evacuationRoutes'].append(x)
+
+        self.response.headers['Content-Type'] = 'application/json'
+        self.response.write( json.encode(result) )

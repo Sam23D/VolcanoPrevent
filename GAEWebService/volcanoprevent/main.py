@@ -13,5 +13,6 @@ app = webapp2.WSGIApplication([
     ('/volcanoes',Volcanoes),
     ('/msg',Messages),
     ('/meetpt',MeetingPts),
+    ('/evaRoute',EvacuationRoutes),
     ('/', MainHandler)
 ], debug=True)
