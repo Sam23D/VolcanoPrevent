@@ -24,7 +24,7 @@ class MeetingPt(ndb.Model):
     #vName = ndb.StringProperty()
 
 class EvacuationRoute(ndb.Model):
-
+    meetPt = ndb.StringProperty()
     name = ndb.StringProperty()
     jsonRouteArray = ndb.StringProperty()
     origin = ndb.GeoPtProperty()

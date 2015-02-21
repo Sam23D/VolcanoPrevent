@@ -1,10 +1,21 @@
 from render import Renderer
 from models import *
-
+from math import acos, sin, cos, exp , sqrt, radians
 from webapp2_extras import json
 
+
+def getGeoDistance(lat1, lon1, lat2, lon2 ):
+    eRadius = 6371 # Earth Radius in km
+    lat1 = radians(lat1)
+    lat2 = radians(lat2)
+    lon1 = radians(lon1)
+    lon2 = radians(lon2)
+    distance = acos(  sin(lat1) * sin(lat2)   +   cos(lat1) * cos(lat2) * cos(lon1 - lon2)      ) * eRadius
+
+    return distance
+
 class MeetingPts(Renderer):
-    def post(self,):
+    def post(self, ):
         meetPt = MeetingPt()
 
         meetPt.name = self.request.get('name')
@@ -15,25 +26,32 @@ class MeetingPts(Renderer):
         #meetPt.vName = self.request.get('vname')
         meetPt.put()
 
-
+        meetpts = MeetingPt.query()
 
         self.render('index.html', message = meetPt.name + " saved succesfully" )
-    def get(self,  ):
+        
+    def get(self, meetptname ):
+        if meetptname == '*':
+            result = {'meetingpoints':[]}
+            meetPts = MeetingPt.query()
 
-        result = {'meetingpoints':[]}
-        meetPts = MeetingPt.query()
+            for m in meetPts:
+                x = {}
+                x['name'] = m.name
+                x['location'] = str(m.location)
+                #x['vname'] = m.vname
 
-        for m in meetPts:
-            x = {}
-            x['name'] = m.name
-            x['location'] = str(m.location)
-            #x['vname'] = m.vname
+                result['meetingpoints'].append(x)
 
-            result['meetingpoints'].append(x)
+            self.response.headers['Content-Type'] = 'application/json'
+            self.response.write( json.encode(result) )
+        else:
+            meetpt = MeetingPt.query( MeetingPt.name == meetptname ).get()
 
-        self.response.headers['Content-Type'] = 'application/json'
-        self.response.write( json.encode(result) )
+            result = { 'name': meetpt.name, 'location': str(meetpt.location) }
 
+            self.response.headers['Content-Type'] = 'application/json'
+            self.response.write( json.encode(result) )
 
 class Volcanoes(Renderer):
     def post(self,):
@@ -46,10 +64,11 @@ class Volcanoes(Renderer):
 
         volcano.size = int(self.request.get('size'))
         volcano.put()
+        meetpts = MeetingPt.query()
 
         self.render('index.html', message = volcano.name + " saved succesfully" )
 
-    def get(self ):
+    def get(self, ):
         result = {'volcanoes': []}
 
         volcanoes = Volcano.query()
@@ -79,9 +98,11 @@ class Messages(Renderer):
 
         msg.put()
 
-        self.render('index.html', message = msg.type + " saved succesfully" )
+        meetpts = MeetingPt.query()
 
-    def get(self, ):
+        self.render('index.html', message = msg.type + " saved succesfully", meetpts = meetpts )
+
+    def get(self, msgid ):
         result = {'messages': []}
 
         messages = Message.query()
@@ -103,7 +124,7 @@ class EvacuationRoutes(Renderer):
         evaRoute = EvacuationRoute()
 
         evaRoute.name = self.request.get('name')
-
+        evaRoute.meetPt = self.request.get('meetPt')
         allLocations = self.request.get('routePoints')
         auxAllLocations = allLocations.split(';')
         evaRoute.origin = ndb.GeoPt( auxAllLocations[0] )
@@ -112,20 +133,23 @@ class EvacuationRoutes(Renderer):
 
         evaRoute.put()
 
-    def get(self, ):
-        result = {'evacuationRoutes': []}
+    def get(self, latlon ): #Returns the closest evacuation route to the specified  latlon
+        latlon = latlon.split('_')
+        myLat = float(latlon[0])
+        myLon = float(latlon[1])
+        shortestDistance = 21000 #reference of the earths half circunference
 
         evaRoutes = EvacuationRoute.query()
 
         for e in evaRoutes:
-            x = {}
-            x['name'] = e.name
 
-            x['route'] = e.jsonRouteArray.split(';')
+            edistance = getGeoDistance( myLat, myLon, e.origin.lat , e.origin.lon )
 
-            x['origin'] = str(e.origin)
+            if edistance < shortestDistance:
+                shortestDistance = edistance
+                result = e
 
-            result['evacuationRoutes'].append(x)
+        result = {'name':result.name ,'meetPt':result.meetPt , 'route': result.jsonRouteArray.split(';'),'origin': str(result.origin)}
 
         self.response.headers['Content-Type'] = 'application/json'
         self.response.write( json.encode(result) )
