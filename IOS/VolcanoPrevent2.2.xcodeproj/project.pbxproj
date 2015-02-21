@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D8848071A98D3EE00FD7A9C /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8848061A98D3EE00FD7A9C /* help.png */; };
+		2D88480A1A98D3F900FD7A9C /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8848081A98D3F900FD7A9C /* info.png */; };
+		2D88480B1A98D3F900FD7A9C /* warning.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8848091A98D3F900FD7A9C /* warning.png */; };
 		2D891D011A97FDE200883D0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D891D001A97FDE200883D0C /* main.m */; };
 		2D891D041A97FDE200883D0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D891D031A97FDE200883D0C /* AppDelegate.m */; };
 		2D891D071A97FDE200883D0C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D891D061A97FDE200883D0C /* FirstViewController.m */; };
@@ -53,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D8848061A98D3EE00FD7A9C /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
+		2D8848081A98D3F900FD7A9C /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		2D8848091A98D3F900FD7A9C /* warning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warning.png; sourceTree = "<group>"; };
 		2D891CFB1A97FDE200883D0C /* VolcanoPrevent2.2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VolcanoPrevent2.2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D891CFF1A97FDE200883D0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D891D001A97FDE200883D0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -217,6 +223,9 @@
 		2DE6E70D1A980C2300C1FF5D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2D8848081A98D3F900FD7A9C /* info.png */,
+				2D8848091A98D3F900FD7A9C /* warning.png */,
+				2D8848061A98D3EE00FD7A9C /* help.png */,
 				2DE6E7271A984DC600C1FF5D /* volcanotransparent 2.png */,
 				2DE6E7251A984AE700C1FF5D /* volcanotransparent.png */,
 				2DE6E71A1A9821C700C1FF5D /* 11015279_10152881654042713_1936764271_n.jpg */,
@@ -316,8 +325,11 @@
 				2DE6E7281A984DC600C1FF5D /* volcanotransparent 2.png in Resources */,
 				2D891D121A97FDE200883D0C /* LaunchScreen.xib in Resources */,
 				2DE6E7171A98132700C1FF5D /* news64x64.png in Resources */,
+				2D8848071A98D3EE00FD7A9C /* help.png in Resources */,
 				2D891D0F1A97FDE200883D0C /* Images.xcassets in Resources */,
 				2DE6E7151A98132700C1FF5D /* guide64x64.png in Resources */,
+				2D88480A1A98D3F900FD7A9C /* info.png in Resources */,
+				2D88480B1A98D3F900FD7A9C /* warning.png in Resources */,
 				A11BAAB11A9807C900936CF1 /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

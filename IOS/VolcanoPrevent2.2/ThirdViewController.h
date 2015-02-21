@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThirdViewController : UIViewController
+@interface ThirdViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>{
+    
+    NSMutableArray *news;
+    NSMutableArray *icon;
+    UIImage *help;
+    UIImage *warning;
+    UIImage *info;
+    
+}
 
 @end
