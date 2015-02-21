@@ -28,8 +28,8 @@
 		2D891D3C1A97FEF900883D0C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D891D3B1A97FEF900883D0C /* QuartzCore.framework */; };
 		2D891D3E1A97FF0200883D0C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D891D3D1A97FF0200883D0C /* SystemConfiguration.framework */; };
 		2D891D401A97FFA900883D0C /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D891D3F1A97FFA900883D0C /* GoogleMaps.framework */; };
-		2D891D421A97FFB800883D0C /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2D891D411A97FFB800883D0C /* GoogleMaps.bundle */; };
 		2D891D451A98006800883D0C /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D891D441A98006800883D0C /* ThirdViewController.m */; };
+		A11BAAB11A9807C900936CF1 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A11BAAB01A9807C900936CF1 /* GoogleMaps.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,9 +71,9 @@
 		2D891D3B1A97FEF900883D0C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2D891D3D1A97FF0200883D0C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2D891D3F1A97FFA900883D0C /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
-		2D891D411A97FFB800883D0C /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "../../GoogleMaps-iOS-1.9.2/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
 		2D891D431A98006800883D0C /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		2D891D441A98006800883D0C /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		A11BAAB01A9807C900936CF1 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,11 +140,11 @@
 		2D891CFD1A97FDE200883D0C /* VolcanoPrevent2.2 */ = {
 			isa = PBXGroup;
 			children = (
+				A11BAAB01A9807C900936CF1 /* GoogleMaps.bundle */,
 				2D891D021A97FDE200883D0C /* AppDelegate.h */,
 				2D891D031A97FDE200883D0C /* AppDelegate.m */,
 				2D891D051A97FDE200883D0C /* FirstViewController.h */,
 				2D891D061A97FDE200883D0C /* FirstViewController.m */,
-				2D891D411A97FFB800883D0C /* GoogleMaps.bundle */,
 				2D891D081A97FDE200883D0C /* SecondViewController.h */,
 				2D891D3F1A97FFA900883D0C /* GoogleMaps.framework */,
 				2D891D091A97FDE200883D0C /* SecondViewController.m */,
@@ -267,7 +267,7 @@
 				2D891D0D1A97FDE200883D0C /* Main.storyboard in Resources */,
 				2D891D121A97FDE200883D0C /* LaunchScreen.xib in Resources */,
 				2D891D0F1A97FDE200883D0C /* Images.xcassets in Resources */,
-				2D891D421A97FFB800883D0C /* GoogleMaps.bundle in Resources */,
+				A11BAAB11A9807C900936CF1 /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +489,7 @@
 				2D891D231A97FDE300883D0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D891D241A97FDE300883D0C /* Build configuration list for PBXNativeTarget "VolcanoPrevent2.2Tests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +498,7 @@
 				2D891D261A97FDE300883D0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
