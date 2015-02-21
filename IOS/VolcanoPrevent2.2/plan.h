@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  plan.h
 //  VolcanoPrevent2.2
 //
 //  Created by Erick  Alcántar Elías on 20/02/15.
@@ -8,12 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-NSInteger number;
-
-@interface SecondViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>{
-    NSMutableArray *guide;
+@interface plan : UIViewController{
+    
 }
 
+- (IBAction)back:(id)sender;
 
 @end
-
