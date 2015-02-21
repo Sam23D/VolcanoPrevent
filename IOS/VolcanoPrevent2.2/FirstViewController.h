@@ -16,6 +16,9 @@
     NSString *longitude;
     NSString *altitude;
     
+    double latitudD;
+    double longitudD;
+    
 }
 
 @property NSString *toLatitude;

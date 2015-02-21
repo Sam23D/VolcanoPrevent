@@ -42,6 +42,7 @@
 		2DE6E7241A9842ED00C1FF5D /* After.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE6E7231A9842ED00C1FF5D /* After.m */; };
 		2DE6E7261A984AE700C1FF5D /* volcanotransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE6E7251A984AE700C1FF5D /* volcanotransparent.png */; };
 		2DE6E7281A984DC600C1FF5D /* volcanotransparent 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE6E7271A984DC600C1FF5D /* volcanotransparent 2.png */; };
+		2DF6223D1A98FFA800C5C527 /* LaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DF6223C1A98FFA800C5C527 /* LaunchScreen.png */; };
 		A11BAAB11A9807C900936CF1 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A11BAAB01A9807C900936CF1 /* GoogleMaps.bundle */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,7 @@
 		2DE6E7231A9842ED00C1FF5D /* After.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = After.m; sourceTree = "<group>"; };
 		2DE6E7251A984AE700C1FF5D /* volcanotransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volcanotransparent.png; sourceTree = "<group>"; };
 		2DE6E7271A984DC600C1FF5D /* volcanotransparent 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volcanotransparent 2.png"; sourceTree = "<group>"; };
+		2DF6223C1A98FFA800C5C527 /* LaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen.png; sourceTree = "<group>"; };
 		A11BAAB01A9807C900936CF1 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -223,6 +225,7 @@
 		2DE6E70D1A980C2300C1FF5D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2DF6223C1A98FFA800C5C527 /* LaunchScreen.png */,
 				2D8848081A98D3F900FD7A9C /* info.png */,
 				2D8848091A98D3F900FD7A9C /* warning.png */,
 				2D8848061A98D3EE00FD7A9C /* help.png */,
@@ -323,6 +326,7 @@
 				2DE6E7161A98132700C1FF5D /* map64x64.png in Resources */,
 				2D891D0D1A97FDE200883D0C /* Main.storyboard in Resources */,
 				2DE6E7281A984DC600C1FF5D /* volcanotransparent 2.png in Resources */,
+				2DF6223D1A98FFA800C5C527 /* LaunchScreen.png in Resources */,
 				2D891D121A97FDE200883D0C /* LaunchScreen.xib in Resources */,
 				2DE6E7171A98132700C1FF5D /* news64x64.png in Resources */,
 				2D8848071A98D3EE00FD7A9C /* help.png in Resources */,
