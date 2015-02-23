@@ -16,7 +16,7 @@
         <label>MeetPt</label><br>
         <input  name="name" placeholder="Name" >
         <input  name="location" placeholder="Location (float , float )">
-        
+
         <button type="submit">Save</button>
     </form>
 
@@ -39,8 +39,46 @@
         <button type="submit">Save</button>
     </form>
 
+    <form action="/evaRoute" method="post">
+        <label>evaRoute</label><br>
 
+        <input name="name" placeholder="Name">
+        <input name="routePoints" placeholder="Route (lat, lon; lat, lon)">
+        <select name="meetPts">
+          {% for m in meetpts %}
+            <option>{{m.name}}</option>
+          {% endfor %}
+        </select>
+        <button type="submit">Save</button>
+    </form>
 
+    <h1>API DOC</h1>
+    <hr>
+    Volcanoes<br>
+
+    -GET-  'http://volcanoprevent.appspot.com/volcanoes' <br> returns a list of all the volcanoes in the database as json
+    with the next syntax {"volcanoes": [list containing all the volcanoes ( {"country": (str), "size": (int), "location": (lat(str),lon(str)), "name":(str)} )] }
+    <hr>
+    <h1>Evacuation Routes</h1>
+    -GET- 'http://volcanoprevent.appspot.com/evaRoute/(latitude(double))_(longitude(double))'<br>
+    returns the closes Evacuation Route to the latitude and longitude specified in the URL,
+    Syntax:<br>
+    {"origin":position(str),"route":[list of positions "lat, lon"(str)],"name":(str)}<br>
+    like so:<br>
+    {"origin":"28.673898,-106.079871","route":["28.673898,-106.079871","28.673896,-106.080159","28.674125,-106.080264","28.673987,-106.08071"],"name":"Entrada lateral"}
+    <hr>
+    <h1>Meeting Points</h1>
+    -GET- 'http://volcanoprevent.appspot.com/evaRoute/name(str)'<br>
+    will return the MeetingPoint with the name specified with the next syntax:<br>
+    {"location":"lat,lon"(str),"name":(str)}<br>
+    like this:<br>
+    {"location":"28.674295,-106.076957","name":"Gimnasio ITESM"}<br>
+    All meeting points can be retrieves by passing a * instead like this:<br>
+    'http://volcanoprevent.appspot.com/evaRoute/*'<br>
+    the result will have the next syntax:<br>
+    {"meetingpoints":[ list of all the meeting points {"name":(str),"location":"lat,lon"(str)},]}<br>
+    like this:<br>
+    {"meetingpoints":[{"name":"lol","location":"28.674351,-106.075324"},{"name":"Zocalo","location":"0.0,0.0"},{"name":"hola","location":"18.57,-95.32"},{"name":"Gimnasio ITESM","location":"28.674295,-106.076957"}]}
 
 
     <!-- FOUNDATION -->
