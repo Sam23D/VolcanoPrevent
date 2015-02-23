@@ -43,6 +43,7 @@
 		2DE6E7261A984AE700C1FF5D /* volcanotransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE6E7251A984AE700C1FF5D /* volcanotransparent.png */; };
 		2DE6E7281A984DC600C1FF5D /* volcanotransparent 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE6E7271A984DC600C1FF5D /* volcanotransparent 2.png */; };
 		2DF6223D1A98FFA800C5C527 /* LaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DF6223C1A98FFA800C5C527 /* LaunchScreen.png */; };
+		2DF6223F1A993A1900C5C527 /* meetpt.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DF6223E1A993A1900C5C527 /* meetpt.png */; };
 		A11BAAB11A9807C900936CF1 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A11BAAB01A9807C900936CF1 /* GoogleMaps.bundle */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,7 @@
 		2DE6E7251A984AE700C1FF5D /* volcanotransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volcanotransparent.png; sourceTree = "<group>"; };
 		2DE6E7271A984DC600C1FF5D /* volcanotransparent 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volcanotransparent 2.png"; sourceTree = "<group>"; };
 		2DF6223C1A98FFA800C5C527 /* LaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen.png; sourceTree = "<group>"; };
+		2DF6223E1A993A1900C5C527 /* meetpt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meetpt.png; sourceTree = "<group>"; };
 		A11BAAB01A9807C900936CF1 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -149,7 +151,6 @@
 				2D891D331A97FED400883D0C /* libc++.dylib */,
 				2D891D311A97FEBC00883D0C /* ImageIO.framework */,
 				2D891D2F1A97FEB800883D0C /* GLKit.framework */,
-				2D891D2D1A97FEB000883D0C /* CoreText.framework */,
 				2D891D2B1A97FEA700883D0C /* CoreLocation.framework */,
 				2D891D291A97FEA100883D0C /* CoreData.framework */,
 				2D891D271A97FE6600883D0C /* AVFoundation.framework */,
@@ -225,9 +226,11 @@
 		2DE6E70D1A980C2300C1FF5D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2DF6223E1A993A1900C5C527 /* meetpt.png */,
 				2DF6223C1A98FFA800C5C527 /* LaunchScreen.png */,
 				2D8848081A98D3F900FD7A9C /* info.png */,
 				2D8848091A98D3F900FD7A9C /* warning.png */,
+				2D891D2D1A97FEB000883D0C /* CoreText.framework */,
 				2D8848061A98D3EE00FD7A9C /* help.png */,
 				2DE6E7271A984DC600C1FF5D /* volcanotransparent 2.png */,
 				2DE6E7251A984AE700C1FF5D /* volcanotransparent.png */,
@@ -332,6 +335,7 @@
 				2D8848071A98D3EE00FD7A9C /* help.png in Resources */,
 				2D891D0F1A97FDE200883D0C /* Images.xcassets in Resources */,
 				2DE6E7151A98132700C1FF5D /* guide64x64.png in Resources */,
+				2DF6223F1A993A1900C5C527 /* meetpt.png in Resources */,
 				2D88480A1A98D3F900FD7A9C /* info.png in Resources */,
 				2D88480B1A98D3F900FD7A9C /* warning.png in Resources */,
 				A11BAAB11A9807C900936CF1 /* GoogleMaps.bundle in Resources */,

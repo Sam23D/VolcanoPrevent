@@ -15,6 +15,10 @@
     NSString *latitude;
     NSString *longitude;
     NSString *altitude;
+    NSDictionary *res;
+    GMSMutablePath *path;
+    NSArray *pathline;
+    
     
     double latitudD;
     double longitudD;
@@ -25,7 +29,7 @@
 @property NSString *toLongitude;
 @property NSString *toAltitude;
 @property (nonatomic, retain) CLLocationManager *localizador;
-
+@property (nonatomic, strong) NSMutableData *responseData;
 
 @end
 
