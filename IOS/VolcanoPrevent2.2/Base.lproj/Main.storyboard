@@ -175,22 +175,6 @@ Clear roofs of ash. The ash is very heavy and can cause the building to collapse
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="26" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G2G-tI-jeq">
-                                <rect key="frame" x="31" y="70" width="273" height="489"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Follow the evacuation order issued by authorities.
-
-Avoid areas downwind and river valleys downstream of the volcano.
-
-If your caught indoors, close all windows and doors, put machinery inside a barn, and bring animals inside.
-
-If you’re trapped outdoors, seek shelter indoors. If you’re caught in falling rocks, roll into a ball and protect your head. If you’re caught near a stream, be aware of mudflows. Move to higher ground.
-
-Protect yourself when ash falls. Wear long-sleeved shirts and long pants. Use goggles to protect your eyes. Wear a dust mask and keep car engines off.</string>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OqM-F2-gCr">
                                 <rect key="frame" x="16" y="20" width="43" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -202,6 +186,22 @@ Protect yourself when ash falls. Wear long-sleeved shirts and long pants. Use go
                                     <action selector="back:" destination="pTy-G1-7Jy" eventType="touchUpInside" id="H2i-f2-0Hv"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="26" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G2G-tI-jeq">
+                                <rect key="frame" x="31" y="69" width="273" height="489"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <mutableString key="text">Follow the evacuation order issued by authorities.
+
+Avoid areas downwind and river valleys downstream of the volcano.
+
+If your caught indoors, close all windows and doors, put machinery inside a barn, and bring animals inside.
+
+If you’re trapped outdoors, seek shelter indoors. If you’re caught in falling rocks, roll into a ball and protect your head. If you’re caught near a stream, be aware of mudflows. Move to higher ground.
+
+Protect yourself when ash falls. Wear long-sleeved shirts and long pants. Use goggles to protect your eyes. Wear a dust mask and keep car engines off.</mutableString>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -261,7 +261,7 @@ Know evacuation routes.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xj2-V6-8kY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="-137"/>
+            <point key="canvasLocation" x="810" y="-132"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
